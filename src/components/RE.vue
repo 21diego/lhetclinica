@@ -1,13 +1,14 @@
 <template>
   <div>
-      <ul>
-      <li class="cardd" v-for="(i,index) in registros" :key="index">
+    <ul>
+      <li class="cardd" v-for="(registro,index) in registros" :key="index">
         <router-link to="/detalleRE">
-          <div @click="st_cargarREActual(i.registro)">{{i.registro.ingreso}}: {{i.registro.observaciones}}</div>
+          <div @click="st_cargarREActual(registro)">{{registro.fechaHora}}: {{registro.observaciones}}</div>
         </router-link>
         <i class="fas fa-caret-right"></i>
       </li>
     </ul>
+    <router-link :to="'/registerre/'+paciente.id" class="btn btn-large">+Nuevo Registro</router-link>
   </div>
 </template>
 

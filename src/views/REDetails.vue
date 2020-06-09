@@ -3,7 +3,11 @@
         <Navbar/>
         <BackBtn />
         <div class="miPerfil">Perfil del paciente</div>
-        {{this.st_REActual.ingreso}}
+        {{this.st_REActual.fechaHora}}
+        {{this.st_REActual.tensionArterial}}
+        {{this.st_REActual.frecuenciaCardiaca}}
+        {{this.st_REActual.frecuenciaRespiratoria}}
+        {{this.st_REActual.temperatura}}
         {{this.st_REActual.observaciones}}
     </div>
 </template>
